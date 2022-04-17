@@ -2,7 +2,6 @@
 
 <h1>Home</h1>
 <p><%= startingContent %></p>
-<% console.log(posts); %>
 
 <% posts.forEach(function(post){ %>
 
@@ -10,7 +9,7 @@
 <img src=<%= post.userImage %> class="blog-img">
 
 <p><%= post.userPost%></p>
-
+<hr>
 <% }); %>
 
 <%- include("partials/footer"); -%>
