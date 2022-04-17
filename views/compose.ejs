@@ -2,20 +2,20 @@
 <h1>Compose</h1>
 
 <!-- form allows it to make post request to server -->
-<form class="text" action="/compose" method="post" enctype="multipart/form-data">
+<form class="text" action="/compose" method="POST" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"><b>Title</b></label>
         <input type="text" class="form-control" id="exampleFormControlInput1" name="userTitle">
     </div>
     <div class="mb-3">
         <label for="formFile" class="form-label"><b>Image</b></label>
-        <input class="form-control" type="file" id="formFile" name="imageFile">
+        <input class="form-control" type="file" id="formFile" name="imageFile" required multiple />
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"><b>Post</b></label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="userPost"></textarea>
     </div>
-    <button class="btn btn-primary active" type="submit" name="button">Publish</button>
+    <button class="btn btn-primary active" type="submit" name="button" value="Upload">Publish</button>
 </form>
 
 <%- include("partials/footer") %>
