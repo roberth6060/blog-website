@@ -1,15 +1,256 @@
 <%- include("partials/header"); -%>
-
 <h1>Home</h1>
 <p><%= startingContent %></p>
+<h2>Recent Posts</h2>
 
-<% posts.forEach(function(post){ %>
+<ul class="cards">
+    <!-- Blog post-->
+    <% posts.forEach(function(post){ %>
+    <li class="cards__item" >
+        <div class="card">
+            <div class="card__image card__image--fence"><img src="<%- post.userImage %>"></div>
+            <div class="card__content"> %>
+                <div class="card__title"><%= post.userTitle %></div>
+                <div class="small text-muted">January 1, 2022</div> %>
+                <p class="card__text"><%= post.userPost.substring(0, 100) + " ..." %>
+                    <a class="btn btn-primary card__btn" href="/posts/<%=post.userTitle%>">Read More</a>
+                </p>%>
+            </div>%>
+        </div>%>
+    </li>
+    <% }); %>
+</ul>
+<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase " id="less">← Less Posts</a><a class="btn btn-primary text-uppercase " id="more">Older Posts →</a>
+</div>
 
-<h1><%= post.userTitle %></h1>
-<img src="<%- post.userImage %>">
+<div class="quote-section">
+    <div class="quote">
+        <h1>“There is no better than adversity. Every defeat, every heartbreak, every loss, contains its own seed, its
+            own lesson on how to improve your performance next time.”</h1>
+        <h2>― Malcolm X</h2>
+    </div>
+    <div class="malcolm-x-img">
+        <div class="trans-div"></div>
+    </div>
+</div>
 
-<p><%= post.userPost.substring(0, 100) + " ..." %> <a href="/posts/<%=post.userTitle%>">Read More</a></p>
-<hr>
-<% }); %>
+<div class="about-me">
+    <div class="profile-img">
+        <img id="Profile-Picture" src="../images/Robert.JPG" alt="Profile-Picture">
+    </div>
+    <div class="About-text">
+        <div class="container">
+            <h2>Hi, I’m Robert</h2>
+            <p class="card__text"><%= aboutHome.substring(0, 300) + " ..." %>
+                <a class="btn btn-primary card__btn" href="/about">Read More</a>
+            </p>%>
+        </div>
+    </div>
 
-<%- include("partials/footer"); -%>
+</div>
+
+<div class="traveling-imgs">
+    <div class="row">
+        <div class="col-lg-12 text-center my-2">
+            <h1>
+                THE WORLD IS MY HOME
+            </h1>
+        </div>
+    </div>
+    <div id="earth"></div>
+    <div class="container">
+
+        <div class="portfolio-menu mt-2 mb-4">
+            <ul>
+                <li class="btn btn-outline-dark active" data-filter="*">All</li>
+                <li class="btn btn-outline-dark text" data-filter=".selfie">Travel</li>
+                <li class="btn btn-outline-dark" data-filter=".gts">Family</li>
+                <li class="btn btn-outline-dark" data-filter=".lap">Web Design</li>
+                
+            </ul>
+        </div>
+        <div class="portfolio-item row">
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/10.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="../images/Gallary/10.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/7.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/7.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/28.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/28.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/5.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/5.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/18.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/18.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/9.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="../images/Gallary/9.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/31.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/31.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                <a href="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/27.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/27.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                <a href="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/33.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/33.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/4.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/4.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/19.jpg" class="fancylight popup-btn"
+                    data-fancybox-group="light">
+                    <img class="img-fluid" src="../images/Gallary/19.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/3.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/3.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/28.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/28.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/36.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/36.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/25.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/25.jpg" alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/23.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/23.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/16.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/16.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/13.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/13.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                <a href="https://image.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="https://image.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg" alt="">
+                </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                <a href="https://image.freepik.com/free-photo/business-woman-working-laptop_1388-67.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="https://image.freepik.com/free-photo/business-woman-working-laptop_1388-67.jpg" alt="">
+                </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/34.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/34.jpg"
+                        alt="">
+                </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                <a href="../images/Gallary/29.jpg"
+                    class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid"
+                        src="../images/Gallary/29.jpg"
+                        alt="">
+                </a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <%- include("partials/footer"); -%>
