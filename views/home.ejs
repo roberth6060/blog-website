@@ -14,7 +14,7 @@
                 <div class="card__title"><%= post.title %></div>
                 <div class="small text-muted"><%= post.date %></div>
                 <p class="card__text">
-                   
+                    <%= post.content.substring(0, 100) + " ..." %>
                     <a class="btn btn-primary card__btn" href="/posts/<%=post._id%>">Read More</a>
                 </p>%>
             </div>%>
