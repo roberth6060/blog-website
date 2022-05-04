@@ -1,7 +1,22 @@
 <%- include("partials/header") %>
 
-<h1><%= title %></h1>
-<img src="../<%- image %>" alt="" srcset="">
-<p><%= content %></p>
+<article class="mb-4 ">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7 pb-3">
+                <a class="h5 text-secondary text-decoration-none" href="/blog">All Posts</a>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 border p-5 ">
+                <h1><%=title%></h1>
+                <div class="small text-muted">January 1, 2022</div>
+                <img src="../<%- image %>" alt="" srcset="">
+                <div class="row">
+                    <p><%-content%></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <%- include("partials/footer") %>

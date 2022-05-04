@@ -36,42 +36,63 @@
         </div>
     </div>
 </footer>
+<!-- Tint API Script-->
+<script src="https://cdn.tiny.cloud/1/f0lseo6nja6ju7ev6z94a0uxvlgdfn99bejj37ox63929xe9/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
 <!-- Core theme JS-->
 <script>
-    /* ====== Show More/Less ====== */
-    const elementList = [...document.querySelectorAll('.cards .cards__item')];
+    tinyMCE.init({
 
-    $(document).ready(function () {
-        $('.cards li:lt(3)').show();
-        $('#less').hide();
-        var items = elementList.length;
-        var shown = 3;
-        $('#more').click(function () {
-            $('#less').show();
-            shown = $('.cards li:visible').length + 3;
-            if (shown < items) {
-                $('.cards li:lt(' + shown + ')').show(300);
-            } else {
-                $('.cards li:lt(' + items + ')').show(300);
-                $('#more').hide();
-            }
-        });
-        $('#less').click(function () {
-            $('.cards li').not(':lt(3)').hide(300);
-            $('#more').show();
-            $('#less').hide();
-        });
+        entity_encoding: "raw"
     });
 
+    /* ====== Tint ====== */
+    tinymce.init({
+        selector: 'textarea#editor',
+        menubar: false,
+        plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+        toolbar_mode: 'floating',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name'
+    });
 
+    /* ====== Show More/Less ====== */
+    const elementList = [...document.querySelectorAll('.cards .cards__item')];
+    let items = elementList.length;
+    let shown = 3;
+    if (items === 0) {
+        $("#more").html("No Post");
+        $('#less').hide();
+    } else {
+        $(document).ready(function () {
+            $('.cards li:lt(3)').show();
+            $('#less').hide();
+
+            $('#more').click(function () {
+
+                $('#less').show();
+                shown = $('.cards li:visible').length + 3;
+                if (shown < items) {
+                    $('.cards li:lt(' + shown + ')').show(300);
+                } else {
+                    $('.cards li:lt(' + items + ')').show(300);
+                    $('#more').hide();
+                }
+            });
+            $('#less').click(function () {
+                $('.cards li').not(':lt(3)').hide(300);
+                $('#more').show();
+                $('#less').hide();
+            });
+        });
+
+    }
 
     /* ====== Image Gallary ====== */
     $('.portfolio-menu ul li').click(function () {
         $('.portfolio-menu ul li').removeClass('active');
         $(this).addClass('active');
-
-
-
         var selector = $(this).attr('data-filter');
         $('.portfolio-item').isotope({
             filter: selector
