@@ -9,6 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
+const moment = require('moment')
 const {
     text
 } = require("body-parser");
@@ -32,11 +33,14 @@ async function main() {
             required: [true, "Please type something!😒"]
         },
         image: String,
+        createdOn: {
+            type: Date,
+            default: Date.now
+        },
         content: {
             type: String,
             required: [true, "Please type something!😒"]
         }
-
     });
 
     const Post = mongoose.model("Post", postSchema);
@@ -47,30 +51,7 @@ async function main() {
     const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
     /* ====== Date ====== */
-    //get date 
-    module.exports.getDate = function () {
-
-        const today = new Date();
-        const options = {
-            weekday: "long",
-            day: "numeric",
-            month: "long"
-        };
-        // Converts a date to a String, returning the "date" portion using the operating 
-        // system's locale's conventions: (pass in var options to format date string)
-        return today.toLocaleDateString("en-US", options);
-    };
-
-    //Get day 
-    exports.getDay = function () {
-        const today = new Date();
-        const options = {
-            weekday: "long"
-        };
-        // Converts a date to a String, returning the "date" portion using the operating 
-        // system's locale's conventions: (pass in var options to format date string)
-        return today.toLocaleDateString("en-US", options);
-    };
+   
 
     /* ====== Upload Images Using Multer ====== */
     const storage = multer.diskStorage({

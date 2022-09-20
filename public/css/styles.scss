@@ -5,6 +5,12 @@ $gray: #999999;
 $gray-light: #cccccc;
 $gray-lighter: #ececec;
 $gray-lightest: lighten($gray-lighter, 4%);
+//Media Query:
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+$lgdesktop:1600px;
 
 /* ====== Website Structure ====== */
 *,
@@ -51,6 +57,41 @@ p a {
 .container {
     max-width: 80vw !important;
 }
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0085A1;
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 /* ====== Navbar ====== */
 #mainNav {
@@ -107,7 +148,7 @@ p a {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $laptop) {
     #mainNav {
         transition: background-color 0.2s;
         /* Force Hardware Acceleration in WebKit */
@@ -227,13 +268,14 @@ header.masthead:before {
     width: 100%;
 }
 
-.cards,.cards-blog {
+.cards,
+.cards-blog {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
 
     li {
         padding: 1rem;
@@ -242,14 +284,11 @@ header.masthead:before {
         max-width: auto;
         min-height: 30rem;
 
- 
-
-        @media(max-width: 1400px) {
-            // width: 33.3333%;
+        @media(max-width: $lgdesktop) {
             width: 50%;
         }
 
-        @media(max-width: 800px) {
+        @media(max-width: $laptop) {
             width: 100%;
         }
     }
@@ -257,7 +296,7 @@ header.masthead:before {
 
 .cards {
     li {
-          display: none;
+        display: none;
     }
 }
 
@@ -361,39 +400,50 @@ header.masthead:before {
     justify-content: center;
     align-items: center;
 
-    @media(max-width: 800px) {
-        flex-direction: column !important;
-    }
-
-
-
     .quote {
         flex: 1 1 50%;
         height: auto;
-        padding: 10rem;
+        padding: 8rem;
         color: $gray-dark;
 
         h1 {
             font-size: 30px;
+            font-weight: 600;
+
+            @media(max-width: $lgdesktop) {
+                font-size: 28px;
+
+            }
         }
 
         h2 {
             font-size: 22px;
 
+            @media(max-width: $lgdesktop) {
+                font-size: 20px;
+
+
+            }
         }
+
+        @media(max-width: $lgdesktop) {
+            padding: 2rem;
+        }
+
+
 
     }
 
     .malcolm-x-img {
         flex: 1 1 50%;
-        min-height: 400px;
-        height: 100%;
         min-height: 500px;
+        height: auto;
         background-image: url("../images/malcolm-x.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: bottom right 14rem;
         background-size: 71rem;
+
 
         @media(max-width: 2200px) {
 
@@ -402,19 +452,22 @@ header.masthead:before {
         }
 
         @media(max-width: 1600px) {
-            background-size: 75rem;
-            background-position: bottom left 8rem !important;
+            // background-size: 75rem;
+            background-position: bottom left 15rem;
         }
 
         @media(max-width: 800px) {
-            background-size: 40rem;
-            background-position: bottom left 4rem !important;
-
+            background-size: 20rem;
         }
 
     }
 
+    @media(max-width: 800px) {
+        min-height: 100px;
+        height: auto;
+        flex-direction: column;
 
+    }
 
 }
 
@@ -431,7 +484,6 @@ header.masthead:before {
 .about-me {
 
     display: flex;
-    flex-wrap: wrap;
     height: auto;
     min-height: 500px;
     justify-content: center !important;
@@ -458,15 +510,23 @@ header.masthead:before {
 
     .About-text {
         flex: 1 1 50%;
+        width: auto;
         height: 100% !important;
         padding: 50px 25px;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
 
         .container {
-            width: 50%;
+            width: 500px;
+            min-width: auto;
         }
 
+    }
+
+    @media(max-width: $tablet) {
+        flex-direction: column-reverse;
+        width: 100%;
     }
 }
 
