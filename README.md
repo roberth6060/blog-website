@@ -13,7 +13,7 @@ My personal blog website for blogging different aspect of my personal life from 
 - run with yarn start or npm
 
 ```bash
-$ git clone https://github.com/roberth6060/Personal-Blog.git
+$ git clone https://github.com/roberth6060/blog-website.git
 $ cd project folder
 $ yarn or npm i
 $ yarn start or npm start

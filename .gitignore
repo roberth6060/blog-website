@@ -1,10 +1,9 @@
-# dependencies
 /node_modules
 /public/images
 /uploads
 
-# misc
-.env
+*.exe
+*.env
 .DS_Store
 .env.local
 .env.development.local
