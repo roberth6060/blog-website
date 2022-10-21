@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-  color: #0085A1;
+  color: #0085a1;
 }
 
 a:not([href]):not([class]),
@@ -146,14 +146,14 @@ a:not([href]):not([class]):hover {
   }
   #mainNav.is-fixed .navbar-brand:focus,
 #mainNav.is-fixed .navbar-brand:hover {
-    color: #0085A1;
+    color: #0085a1;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus,
 #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
+    color: #0085a1;
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -304,22 +304,6 @@ header.masthead:before {
   min-height: 100%;
 }
 
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
-}
-
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
-}
-
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
-}
-
-.card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
-}
-
 .card__title {
   color: #696969;
   font-size: 1.25rem;
@@ -424,7 +408,7 @@ header.masthead:before {
   flex: 1 1 50%;
   min-height: 500px;
   height: auto;
-  background: #EDEEF7;
+  background: #edeef7;
   justify-content: center !important;
   text-align: center !important;
 }
