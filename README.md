@@ -7,6 +7,7 @@ My personal blog website for blogging different aspect of my personal life from 
 * HTML, CSS/SCSS, node.js, ejs, mongoose, and multer
 
 ### *Installation process* :
+
 - clone repo
 - navigate to project root folder
 - install all dependencies with yarn or npm i
@@ -18,6 +19,10 @@ $ cd project folder
 $ yarn or npm i
 $ yarn start or npm start
 ```
+## Live Website hosted on heroku
+
+https://robert-personal-blog-app.herokuapp.com
+
 ## Author(s)
 
 * Robert C. Haye 
