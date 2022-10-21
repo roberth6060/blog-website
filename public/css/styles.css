@@ -55,7 +55,9 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   line-height: 1.2;
 }
@@ -84,7 +86,9 @@ a:not([href]):not([class]):hover {
   z-index: 1030;
   border-bottom: 1px solid #dee2e6;
   background-color: #fff;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #mainNav .navbar-brand {
@@ -114,14 +118,14 @@ a:not([href]):not([class]):hover {
     color: #fff;
   }
   #mainNav .navbar-brand:focus,
-#mainNav .navbar-brand:hover {
+  #mainNav .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.8);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     color: #fff;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
     color: rgba(255, 255, 255, 0.8);
   }
 }
@@ -145,14 +149,14 @@ a:not([href]):not([class]):hover {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-brand:focus,
-#mainNav.is-fixed .navbar-brand:hover {
+  #mainNav.is-fixed .navbar-brand:hover {
     color: #0085a1;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus,
-#mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
     color: #0085a1;
   }
   #mainNav.is-visible {
@@ -162,7 +166,7 @@ a:not([href]):not([class]):hover {
 }
 /* ====== Header ====== */
 header.masthead {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/bg.jpg");
   position: relative;
   margin-bottom: 3rem;
   padding-top: calc(8rem + 57px);
@@ -196,7 +200,9 @@ header.masthead .site-heading .subheading {
   line-height: 1.1;
   display: block;
   margin-top: 0.625rem;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .post-heading h1,
 header.masthead header.masthead .post-heading .h1 {
@@ -246,13 +252,13 @@ header.masthead:before {
 }
 @media (max-width: 1600px) {
   .cards li,
-.cards-blog li {
+  .cards-blog li {
     width: 50%;
   }
 }
 @media (max-width: 992px) {
   .cards li,
-.cards-blog li {
+  .cards-blog li {
     width: 100%;
   }
 }
@@ -453,7 +459,8 @@ header.masthead:before {
   background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
   border-radius: 50%;
   background-size: 610px;
-  box-shadow: inset 8px 36px 80px 36px rgba(0, 0, 0, 0.823), inset -6px 0 12px 4px rgba(255, 255, 255, 0.371);
+  box-shadow: inset 8px 36px 80px 36px rgba(0, 0, 0, 0.823),
+    inset -6px 0 12px 4px rgba(255, 255, 255, 0.371);
 }
 
 @keyframes rotate {
@@ -507,4 +514,6 @@ header.masthead:before {
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
