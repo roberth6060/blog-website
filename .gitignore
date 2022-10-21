@@ -1,9 +1,6 @@
 /node_modules
-/public/images
-/uploads
-
 *.exe
-*.env
+.env
 .DS_Store
 .env.local
 .env.development.local
