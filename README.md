@@ -23,8 +23,3 @@ $ yarn start or npm start
 * Robert C. Haye 
 
 
-
-## Authors
-
-* Robert C. Haye 
-

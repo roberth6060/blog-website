@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
-
+/public/images
+/uploads
 
 # misc
 .env
