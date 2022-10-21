@@ -81,7 +81,7 @@ async function main() {
   );
   app.use(express.static("public"));
   app.use("/uploads", express.static("uploads"));
-  app.use("/public/", express.static("./public"));
+  app.use("/public", express.static("public"));
 
   /* ====== ejs module====== */
   app.set("view engine", "ejs");
