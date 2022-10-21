@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const app = express();
+const dotenv = require("dotenv").config();
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
@@ -17,8 +18,9 @@ const { response } = require("express");
 main().catch((err) => console.log(err));
 async function main() {
   /* OPEN CONNECT */
+  //Custom API key and Password
   mongoose.connect(
-    "mongodb+srv://roberth60:NIara2020@cluster0.5iczx.mongodb.net/blogDB?retryWrites=true&w=majority",
+    `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.5iczx.mongodb.net/blogDB?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
     }
