@@ -19,9 +19,6 @@ $ cd project folder
 $ yarn or npm i
 $ yarn start or npm start
 ```
-## Live Website hosted on heroku
-
-https://robert-personal-blog-app.herokuapp.com
 
 ## Author(s)
 
